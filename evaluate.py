@@ -16,7 +16,7 @@ def main():
     device = get_device()
 
     # load trained checkpoint
-    ckpt = torch.load("checkpoints/best.pt", map_location="cpu")
+    ckpt = torch.load("checkpoints/best.pt", map_location="cpu",weights_only=False)
 
     # saved normalization stats from training
     mean = ckpt["scaler_mean"]
